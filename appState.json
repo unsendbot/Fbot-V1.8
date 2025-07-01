@@ -1,1 +1,35 @@
-APPSTATE-HERE
+[
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2025-06-30T19:48:48.911Z",
+        "lastAccessed": "2025-06-30T19:48:48.911Z"
+    },
+    {
+        "key": "pas",
+        "value": "100058293865622%3AXOPsw59MuI%2C61578077632920%3AVp2OcQJo8k",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2025-06-30T19:48:48.911Z",
+        "lastAccessed": "2025-06-30T19:48:48.911Z"
+    },
+    {
+        "key": "fbl_st",
+        "value": "101237368%3BT%3A29188542",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2025-06-30T19:48:48.911Z",
+        "lastAccessed": "2025-06-30T19:48:48.911Z"
+    },
+    {
+        "key": "wl_cbv",
+        "value": "v2%3Bclient_version%3A2856%3Btimestamp%3A1751312548",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2025-06-30T19:48:48.911Z",
+        "lastAccessed": "2025-06-30T19:48:48.911Z"
+    }
+]
