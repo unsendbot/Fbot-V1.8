@@ -1,7 +1,7 @@
 const config = require("../config.json");
 
 module.exports = {
-    name: "add",
+    name: "اضف",
     usePrefix: false,
     admin: true,
     usage: "add [list | number]",
@@ -14,17 +14,17 @@ module.exports = {
         const senderID = event.senderID;
 
         if (senderID !== config.ownerID) {
-            return api.sendMessage("❌ You are not authorized to use this command.", threadID);
+            return api.sendMessage("ماعندك صلاحية 🐢.", threadID);
         }
 
         const threads = await api.getThreadList(100, null, ["INBOX"]);
         const groups = threads.filter(t => t.isGroup);
 
         if (args[0] === "list") {
-            if (groups.length === 0) return api.sendMessage("❌ No groups found.", threadID);
+            if (groups.length === 0) return api.sendMessage("لم اجدالمجموعه •-•.", threadID);
 
             const msg = groups.map((g, i) => `${i + 1}. ${g.name || "Unnamed"} (${g.threadID})`).join("\n");
-            return api.sendMessage("📋 List of Groups:\n\n" + msg, threadID);
+            return api.sendMessage("📋قائمة المجموعات  :\n\n" + msg, threadID);
         }
 
         const index = parseInt(args[0]) - 1;
@@ -35,8 +35,8 @@ module.exports = {
             await api.addUserToGroup(config.ownerID, group.threadID);
             return api.sendMessage(`✅ Owner added to group: ${group.name || "Unnamed Group"}`, threadID);
         } catch (err) {
-            console.error("❌ Failed to add owner:", err);
-            return api.sendMessage("❌ Couldn't add owner. They might already be in the group or can't be added.", threadID);
+            console.error("❌ :", err);
+            return api.sendMessage("ما قدرت اضيفك.برو 😐💔 .", threadID);
         }
     }
 };
