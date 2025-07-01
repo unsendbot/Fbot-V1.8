@@ -10,7 +10,7 @@ module.exports = {
         if (args.length > 0) {
             const commandName = args[0].toLowerCase();
 
-            if (commandName === "الكل") {
+            if (commandName === "all") {
                 // Show all non-admin commands in alphabetical order
                 const allCommands = Array.from(global.commands.values())
                     .filter(cmd => !cmd.admin)
@@ -65,13 +65,8 @@ Version: ${command.version}`;
 Here are some commands:  
 ${commandArray}
 
-اكتب مساعدة الكل لرئية جميعالاوامر .
-اكتب 'مساعدة [اسم الامر]' لرئية تفاصيل الامر.`;
-
-        api.sendMessage(helpMessage, threadID, messageID);
-    }
-};
- [اسم_الامر]' لرئية تفاصيل الامر.`;
+Use 'help all' to see all commands.
+Use 'help [command_name]' for details.`;
 
         api.sendMessage(helpMessage, threadID, messageID);
     }
