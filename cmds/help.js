@@ -1,5 +1,5 @@
 module.exports = {
-    name: "help",
+    name: "مساعدة",
     usePrefix: false,
     usage: "help [command_name] (optional) | help all",
     version: "1.3",
@@ -19,9 +19,10 @@ module.exports = {
                     .join("\n\n");
 
                 const allHelpMessage = `
-╔════════════╗
-     🤖 All Commands 🤖
-╚════════════╝
+✿━━━━━━━━━━━━━━━✿\n
+        جميع الاوامر
+\n✿━━━━━━━━━━━━━━━✿\n
+
 ${allCommands}
 
 Use 'help [command_name]' for details.`;
@@ -37,9 +38,9 @@ Use 'help [command_name]' for details.`;
             }
 
             const commandHelpMessage = `
-╔════════════╗
-     🤖 Command Info 🤖
-╚════════════╝
+✿━━━━━━━━━━━━━━━✿\n
+      معلومات الاوامر
+\n✿━━━━━━━━━━━━━━━✿\n
 Name: ${command.name}
 Usage: ${command.usage}
 Prefix Required: ${command.usePrefix ? "✅ Yes" : "❌ No"}
@@ -58,9 +59,9 @@ Version: ${command.version}`;
             .join("\n\n");
 
         const helpMessage = `
-╔════════════╗
-     🤖 Bot Commands 🤖
-╚════════════╝
+✿━━━━━━━━━━━━━━━✿\n 
+       اوامر البوت
+\n✿━━━━━━━━━━━━━━━✿\n
 Here are some commands:  
 ${commandArray}
 
