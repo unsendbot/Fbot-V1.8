@@ -15,13 +15,11 @@ module.exports = {
                 const allCommands = Array.from(global.commands.values())
                     .filter(cmd => !cmd.admin)
                     .sort((a, b) => a.name.localeCompare(b.name))
-                    .map((cmd, index) => `${index + 1}. ${cmd.name} (${cmd.usePrefix ? "uses prefix" : "no prefix"})\n   Usage: ${cmd.usage}`)
+                    .map((cmd, index) => `${index + 1}. ${cmd.name}`)
                     .join("\n\n");
 
                 const allHelpMessage = `
-✿━━━━━━━━━━━━━━━✿\n
-        جميع الاوامر
-\n✿━━━━━━━━━━━━━━━✿\n
+✿━━━━━━━━━━━━━━━✿\nجميع الاوامر\n✿━━━━━━━━━━━━━━━✿\n
 
 ${allCommands}
 
@@ -38,9 +36,7 @@ Use 'help [command_name]' for details.`;
             }
 
             const commandHelpMessage = `
-✿━━━━━━━━━━━━━━━✿\n
-      معلومات الاوامر
-\n✿━━━━━━━━━━━━━━━✿\n
+✿━━━━━━━━━━━━━━━✿\nمعلومات الاوامر\n✿━━━━━━━━━━━━━━━✿\n
 Name: ${command.name}
 Usage: ${command.usage}
 Prefix Required: ${command.usePrefix ? "✅ Yes" : "❌ No"}
@@ -59,9 +55,7 @@ Version: ${command.version}`;
             .join("\n\n");
 
         const helpMessage = `
-✿━━━━━━━━━━━━━━━✿\n 
-       اوامر البوت
-\n✿━━━━━━━━━━━━━━━✿\n
+✿━━━━━━━━━━━━━━━✿\nاوامر البوت\n✿━━━━━━━━━━━━━━━✿\n
 Here are some commands:  
 ${commandArray}
 
